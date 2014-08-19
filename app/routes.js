@@ -31,6 +31,7 @@ module.exports = function(app, express) {
     });
 
     app.post('/app/message', require('./api/support').sendMessage);
+    app.get('/test', require('./api/queryDB').readMsg);
 
 
     //error handler
